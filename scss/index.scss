@@ -72,3 +72,47 @@ header {
         }
     }
 }
+
+section {
+    @include flex;
+    .swiper-container,
+    .swiper-wrapper {
+        width: 100%;
+        height: pxTorem(200px);
+    }
+    .swiper-wrapper {
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        .swiper-slide {
+            width: 100%;
+            height: pxTorem(160px);
+            @include box_flex;
+            @include flexWrap(wrap);
+            @include justify(space-around);
+            @include align;
+            dl {
+                width: 19%;
+                height: pxTorem(80px);
+                @include box_flex;
+                @include justify;
+                @include align;
+                @include direction(column);
+                dt {
+                    .iconfont {
+                        font-size: pxTorem(45px);
+                    }
+                }
+                dd {
+                    line-height: pxTorem(20px);
+                }
+            }
+        }
+        .swiper-pageination {
+            width: 100%;
+            height: pxTorem(40px);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
