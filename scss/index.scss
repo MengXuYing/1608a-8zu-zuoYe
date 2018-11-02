@@ -1,0 +1,74 @@
+@import "_minix.scss";
+@import "common.scss";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(50px);
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    background: rgb(6, 193, 174);
+    color: #fff;
+    p {
+        line-height: pxTorem(50px);
+        font-size: pxTorem(16px);
+        .iconfont {
+            margin-left: pxTorem(10px);
+            font-size: pxTorem(12px);
+        }
+    }
+    label {
+        @include flex;
+        height: pxTorem(32px);
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .1);
+            padding: 0 pxTorem(30px);
+            @include sizing;
+            color: #f5f5f5;
+            border-radius: pxTorem(10px);
+        }
+        .iconfont {
+            position: absolute;
+            left: pxTorem(20px);
+            top: pxTorem(8px);
+            font-size: pxTorem(16px);
+        }
+    }
+    dl {
+        width: pxTorem(30px);
+        @include box_flex;
+        @include direction(column);
+        @include justify;
+        @include align;
+        dt {
+            .iconfont {
+                font-size: pxTorem(20px);
+            }
+        }
+    }
+}
